@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 
 const BookClubMembers = ({ personList, activeBookClub, bookList }) => {
 
@@ -13,7 +13,7 @@ const BookClubMembers = ({ personList, activeBookClub, bookList }) => {
                                         {person.club === activeBookClub ?
                                             <>
                                                 <div className="container membercard">
-                                                    <li className={`${activeBookClub}-font`}>Name: {person.name}</li>
+                                                    <li className={`${activeBookClub}-font`}>Name: {person.firstName} {person.lastName}</li>
                                                     <li className={`${activeBookClub}-font`}>Email: {person.email}</li>
                                                     <li className={`${activeBookClub}-font`}>Club: {person.club}</li>
                                                 </div>

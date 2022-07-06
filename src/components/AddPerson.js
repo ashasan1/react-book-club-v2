@@ -4,7 +4,7 @@ import DropDownElement from "./DropDownElement";
 
 const AddPerson = ({ personList, addPerson, bookClubList }) => {
 
-    const [personData, setPersonData] = useState({ name: '', email: '', club: '' });
+    const [personData, setPersonData] = useState({ firstName: '', lastName:'', email: '', club: '' });
 
     const [selectedClub, setSelectedClub] = useState('Select a Book Club to join!');
 
@@ -13,22 +13,34 @@ const AddPerson = ({ personList, addPerson, bookClubList }) => {
     return (
         <>
             <div className="col md signupform">
-                <h3>Sign up for Book Club!</h3>
+                <h3 style={{ color: 'white', fontFamily: 'sans-serif' }}>Sign up for Book Club!</h3>
 
                 <div className="container">
-                    <label>Full Name</label>
+                    <label className="form-label">First Name</label>
                     <input
                         type="text"
-                        name="person-name"
-                        value={personData.name}
+                        name="person-firstname"
+                        value={personData.firstName}
                         onChange={(event) => {
-                            setPersonData({ ...personData, name: event.target.value });
+                            setPersonData({ ...personData, firstName: event.target.value });
                         }}>
                     </input>
                 </div>
 
                 <div className="container">
-                    <label>Email</label>
+                    <label className="form-label">Last Name</label>
+                    <input
+                        type="text"
+                        name="person-lastname"
+                        value={personData.lastName}
+                        onChange={(event) => {
+                            setPersonData({ ...personData, lastName: event.target.value });
+                        }}>
+                    </input>
+                </div>
+
+                <div className="container">
+                    <label className="form-label">Email</label>
                     <input
                         type="text"
                         name="person-email"
@@ -47,7 +59,7 @@ const AddPerson = ({ personList, addPerson, bookClubList }) => {
                 
 
                 <div className="container">
-                    {personData.name.length > 0 && personData.email.length > 0 ?
+                    {personData.firstName.length > 0 && personData.email.length > 0 ?
                         <button onClick={() => {
                             if(personData.club === '') {
                                 setAlert('Please select a book club to join!');

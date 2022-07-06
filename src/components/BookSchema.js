@@ -4,6 +4,7 @@ const BookSchema = ({ bookList, setBookList }) => {
 
     const books = [
         {
+            bookID: 1,
             bookName: 'Pride and Prejudice',
             bookImage: '/prideandprejudice.jpg',
             bookGenre: 'Romance',
@@ -11,6 +12,7 @@ const BookSchema = ({ bookList, setBookList }) => {
             bookPageLength:''
         },
         {
+            bookID: 2,
             bookName: 'Romeo and Juilet',
             bookImage: '/romeojuliet.jpg',
             bookGenre: 'Romance',
@@ -18,6 +20,7 @@ const BookSchema = ({ bookList, setBookList }) => {
             bookPageLength:''
         },
         {
+            bookID: 3,
             bookName: 'The Hobbit',
             bookImage: '/thehobbit.jpg',
             bookGenre: 'Fantasy',
@@ -25,6 +28,7 @@ const BookSchema = ({ bookList, setBookList }) => {
             bookPageLength:''
         },
         {
+            bookID: 4,
             bookName: 'The Poisoned Chocolates Case',
             bookImage: '/thepoisonedchocolatescase.jpg',
             bookGenre: 'Mystery',

@@ -65,3 +65,15 @@
   border-radius: 10px;
   margin: 5px;
 }
+
+.form-label {
+  font-size: 1.5rem;
+  margin-right: 10px;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.galleryimage {
+  max-width: 200px;
+  margin: 10px;
+  border-radius: 10px;
+}
