@@ -6,7 +6,6 @@ import Home from './Home';
 import BookDiscussion from './BookDiscussion';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import BookSchema from './components/BookSchema';
-import BookDetailPage from './BookDetailPage';
 
 
 function App() {
@@ -17,7 +16,7 @@ function App() {
 
   const [bookList, setBookList] = useState([]);
 
-  const [selectedBook, setSelectedBook] = useState({ bookID: 0, bookName: '' , bookAuthor: ''});
+  const [selectedBook, setSelectedBook] = useState({ bookID: 0, bookName: '' , bookAuthor: '', bookImage: ''});
 
   return (
     <>
@@ -36,7 +35,6 @@ function App() {
       <Routes>
         <Route path='/' element={<Home personList={personList} addPerson={addPerson} bookClubList={bookClubList} bookList={bookList} setBookList={setBookList}/>}/>
         <Route path='/discussion' element={<BookDiscussion bookList={bookList} selectedBook={selectedBook} setSelectedBook={setSelectedBook} />}/>
-        <Route path={`/discussion/id`} element={<BookDetailPage bookList={bookList} selectedBook={selectedBook} setSelectedBook={setSelectedBook} />}/>
       </Routes>
       </BrowserRouter>
       <BookSchema bookList={bookList} setBookList={setBookList} />
